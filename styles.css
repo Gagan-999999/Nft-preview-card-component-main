@@ -1,0 +1,132 @@
+:root {
+  /* Primary */
+  --Blue_500: hsl(215, 51%, 70%);
+  --Cyan_400: hsl(178, 100%, 50%);
+  --Cyan-opace_400: hsla(178, 100%, 50%, 0.5);
+  /* Neutral */
+  --Blue_950: hsl(217, 54%, 11%);
+  --Blue_900: hsl(216, 50%, 16%);
+  --Blue_800: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: clamp(1.2rem, 4.8vw, 1.8rem);
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  background: var(--Blue_950);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: clamp(1rem, 5.3vw, 2rem);
+}
+
+.container {
+  width: clamp(20rem, 100%, 37rem);
+  background-color: var(--Blue_900);
+  padding: clamp(1rem, 6vw, 2.5rem);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem 0 #0b0914;
+}
+.images {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.main-image,
+.view-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.view-logo {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 42%;
+  height: auto;
+  opacity: 0;
+  background-color: var(--Cyan-opace_400);
+}
+.images:hover .view-logo {
+  opacity: 1;
+}
+.text-container {
+  padding-block-start: clamp(0.5rem, 4vw, 2rem);
+  width: 100%;
+}
+.heading a {
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--White);
+}
+.heading a:hover {
+  color: var(--Cyan_400);
+}
+.paragraph {
+  color: var(--Blue_500);
+  font-weight: 300;
+  padding-block: clamp(0.5rem, 4vw, 1.5rem);
+}
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--Blue_800);
+  padding-block: 1rem clamp(0.5rem, 5vw, 1.8rem);
+}
+.eth {
+  color: var(--Cyan_400);
+  margin-inline-start: 0.5em;
+  font-weight: 400;
+}
+.days-left {
+  color: var(--Blue_500);
+  font-weight: 300;
+  margin-inline-start: 0.5em;
+}
+.price,
+.time {
+  display: flex;
+  align-items: center;
+}
+.creator {
+  display: flex;
+  align-items: center;
+  padding-block-start: 1em;
+}
+.creator-name {
+  font-weight: 300;
+  color: var(--Blue_500);
+  margin-inline-start: 0.7em;
+}
+.creator-name span {
+  color: var(--White);
+}
+.creator-name span:hover {
+  color: var(--Cyan_400);
+  cursor: pointer;
+}
+.creator div {
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 2em;
+  aspect-ratio: 1;
+}
+.creator img {
+  width: 100%;
+  height: 100%;
+}
